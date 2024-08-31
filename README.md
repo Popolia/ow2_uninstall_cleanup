@@ -1,5 +1,7 @@
 Ce script est conçu pour supprimer complètement Overwatch 2 et tous les fichiers associés sur votre système, ainsi que pour nettoyer les configurations et caches liés à Blizzard et Battle.net
-:warning: Apres avoir utiliser le .bat  , un redémarrage n'est pas strictement nécessaire, mais il peut être bénéfique pour assurer que toutes les modifications ont été correctement appliquées. , Assurez-vous également de sauvegarder toute donnée importante avant de lancer le script (sensibilité ,audio ,.....), au cas où vous auriez besoin de ces fichiers à l'avenir.:warning: 
+
+ ⚠️Apres avoir utiliser le .bat  , un redémarrage n'est pas strictement nécessaire, mais il peut être bénéfique pour assurer que toutes les modifications ont été correctement appliquées. , 
+Assurez-vous également de sauvegarder toute donnée importante avant de lancer le script (sensibilité ,audio ,.....), au cas où vous auriez besoin de ces fichiers à l'avenir.⚠️
 
 Ce que fait le Script:
 
