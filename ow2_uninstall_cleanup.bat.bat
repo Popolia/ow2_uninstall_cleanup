@@ -31,5 +31,11 @@ rd /s /q "%APPDATA_PATH%\Blizzard"
 rd /s /q "%LOCALAPPDATA_PATH%\Battle.net"
 rd /s /q "%APPDATA_PATH%\Battle.net"
 
+:: Supprimer les entrées du registre
+echo Suppression des clés de registre...
+reg delete "HKEY_CURRENT_USER\Software\Blizzard Entertainment" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Blizzard Entertainment" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Blizzard Entertainment" /f
+
 echo Nettoyage terminé.
 pause
