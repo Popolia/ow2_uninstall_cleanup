@@ -75,5 +75,3 @@ Ce que le Script NE Supprime PAS :
 
     Fichiers Non Connexes :
         Le script ne supprime pas les fichiers et dossiers liés à d'autres programmes ou jeux, ni les fichiers personnels de l'utilisateur.
-
-En résumé, ce script est conçu pour supprimer complètement Overwatch 2 et tous les fichiers associés sur votre système, ainsi que pour nettoyer les configurations et caches liés à Blizzard et Battle.net. Assurez-vous de sauvegarder toute donnée importante avant de lancer le script, au cas où vous auriez besoin de ces fichiers à l'avenir.
