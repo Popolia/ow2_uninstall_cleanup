@@ -21,8 +21,6 @@ Cette partie vérifie si le dossier d'installation d'Overwatch 2 existe. Si c'es
 
 Battle.net :
 
-batch
-
     if exist "%BATTLE_NET_PATH%" (
         echo Suppression du dossier Battle.net...
         rd /s /q "%BATTLE_NET_PATH%"
@@ -34,13 +32,12 @@ batch
 
 Suppression des Fichiers de Cache et de Configuration :
 
-    Blizzard dans LOCALAPPDATA et APPDATA :
+Blizzard dans LOCALAPPDATA et APPDATA :
 
-    batch
-
+*
 echo Suppression des fichiers de cache et de configuration...
 rd /s /q "%LOCALAPPDATA_PATH%\Blizzard"
-rd /s /q "%APPDATA_PATH%\Blizzard"
+rd /s /q "%APPDATA_PATH%\Blizzard"  *
 
 Ces lignes suppriment les dossiers Blizzard dans les répertoires Local et Roaming. Ces dossiers contiennent les fichiers de configuration et les caches liés à Blizzard et à ses jeux.
 
