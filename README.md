@@ -8,85 +8,50 @@ En résumé, ce script est conçu pour supprimer complètement Overwatch 2 et to
 
 Ce que fait le Script:
 
-Déclaration des Variables :
+Résumé du Script Original
 
-        APPDATA_PATH et LOCALAPPDATA_PATH : Définissent les chemins pour les dossiers de configuration utilisateur.
-        OVERWATCH_PATH : Spécifie le chemin d'installation d'Overwatch 2.
-        BATTLE_NET_PATH : Spécifie le chemin d'installation de Battle.net (le client de Blizzard).
+Le script Batch est conçu pour désinstaller Overwatch 2 et supprimer les fichiers et les entrées de registre associées. Voici ce qu'il fait :
 
-Suppression des Dossiers de Jeu :
+    Définition des Variables :
+        Définit les chemins des dossiers et fichiers à supprimer (Overwatch, Battle.net, et les fichiers de cache et de configuration).
 
-        Overwatch 2 :
+    Suppression des Dossiers de Jeu :
+        Supprime les dossiers de Overwatch et Battle.net s'ils existent.
 
-        if exist "%OVERWATCH_PATH%" (
-    echo Suppression du dossier Overwatch...
-    rd /s /q "%OVERWATCH_PATH%") else (
-    echo Le dossier Overwatch n'existe pas.)
+    Suppression des Fichiers de Cache et de Configuration :
+        Supprime les dossiers de cache et de configuration pour Blizzard et Battle.net dans AppData et LocalAppData.
 
-Cette partie vérifie si le dossier d'installation d'Overwatch 2 existe. Si c'est le cas, il supprime le dossier et tout son contenu. Sinon, il affiche un message indiquant que le dossier n'existe pas.
+    Suppression des Clés de Registre :
+        Supprime les clés de registre liées à Blizzard Entertainment pour nettoyer les informations de configuration persistantes.
 
-Battle.net :
+    Affichage de la Confirmation :
+        Affiche "Nettoyage terminé." et met en pause l'exécution pour que l'utilisateur puisse voir les messages.
 
-    if exist "%BATTLE_NET_PATH%" (
-        echo Suppression du dossier Battle.net...
-        rd /s /q "%BATTLE_NET_PATH%"
-    ) else (
-        echo Le dossier Battle.net n'existe pas.
-    )
- 
-Cette partie vérifie si le dossier d'installation de Battle.net existe. Si c'est le cas, il supprime le dossier et tout son contenu. Sinon, il affiche un message indiquant que le dossier n'existe pas.
+Résumé des Modifications Apportées
 
-Suppression des Fichiers de Cache et de Configuration :
+    Messages d'Erreur pour la Suppression des Dossiers :
+        Modification : Ajout de messages d'erreur après chaque tentative de suppression de dossier pour indiquer si la suppression a échoué. Les lignes modifiées sont :
 
-    Blizzard dans LOCALAPPDATA et APPDATA :
-    echo Suppression des fichiers de cache et de configuration...
-    rd /s /q "%LOCALAPPDATA_PATH%\Blizzard"
-    rd /s /q "%APPDATA_PATH%\Blizzard"
+        batch
 
-Ces lignes suppriment les dossiers Blizzard dans les répertoires Local et Roaming. Ces dossiers contiennent les fichiers de configuration et les caches liés à Blizzard et à ses jeux.
+    rd /s /q "%OVERWATCH_PATH%" || echo Échec de la suppression du dossier Overwatch.
+    rd /s /q "%BATTLE_NET_PATH%" || echo Échec de la suppression du dossier Battle.net.
+    rd /s /q "%LOCALAPPDATA_PATH%\Blizzard" || echo Échec de la suppression du dossier Blizzard dans LocalAppData.
+    rd /s /q "%APPDATA_PATH%\Blizzard" || echo Échec de la suppression du dossier Blizzard dans AppData.
+    rd /s /q "%LOCALAPPDATA_PATH%\Battle.net" || echo Échec de la suppression du dossier Battle.net dans LocalAppData.
+    rd /s /q "%APPDATA_PATH%\Battle.net" || echo Échec de la suppression du dossier Battle.net dans AppData.
 
-Battle.net dans LOCALAPPDATA et APPDATA :
+Messages d'Erreur pour la Suppression des Clés de Registre :
 
-    rd /s /q "%LOCALAPPDATA_PATH%\Battle.net"
-    rd /s /q "%APPDATA_PATH%\Battle.net"
-  
-Ces lignes suppriment les dossiers Battle.net dans les répertoires Local et Roaming. Ces dossiers contiennent les paramètres et les fichiers de cache du client Battle.net.
+    Modification : Ajout de messages d'erreur après chaque tentative de suppression de clé de registre pour indiquer si la suppression a échoué. Les lignes modifiées sont :
 
-Affichage du Message de Fin :
+    batch
 
-    echo Nettoyage terminé.
-    pause
+        reg delete "HKEY_CURRENT_USER\Software\Blizzard Entertainment" /f || echo Échec de la suppression de la clé de registre HKEY_CURRENT_USER\Software\Blizzard Entertainment.
+        reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Blizzard Entertainment" /f || echo Échec de la suppression de la clé de registre HKEY_LOCAL_MACHINE\SOFTWARE\Blizzard Entertainment.
+        reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Blizzard Entertainment" /f || echo Échec de la suppression de la clé de registre HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Blizzard Entertainment.
 
-Cette partie affiche un message indiquant que le nettoyage est terminé et met en pause le script pour que vous puissiez voir le message avant que la fenêtre de commande ne se ferme.
+But des Modifications
 
-PAth:
-
-Avertissement et Instructions :
-
-    Ajout d’un avertissement avant la suppression, pour rappeler à l’utilisateur de sauvegarder les données importantes et mentionner que le redémarrage peut être utile mais n'est pas strictement nécessaire.
-
-Suppression des Clés de Registre :
-
-    Les commandes reg delete sont ajoutées pour supprimer les clés de registre spécifiques. Les redirections >nul 2>&1 cachent les messages de succès ou d'erreur pour une sortie plus propre.
-
-Nettoyage des Messages :
-
-    Ajout d'un message de fin et pause pour permettre à l'utilisateur de voir que le script a terminé son exécution.
-
-Ce que le Script Supprime :
-
-    Dossiers d'Installation :
-        Overwatch 2 : Supprime le dossier d'installation principal du jeu.
-        Battle.net : Supprime le client Battle.net et ses fichiers d'installation (si présents).
-        Suppression des Clés de Registre
-
-    Fichiers de Configuration et de Cache :
-        Supprime les dossiers contenant les fichiers de configuration et de cache pour Blizzard et Battle.net. Cela peut inclure les paramètres personnels du jeu, les fichiers de configuration utilisateur, et les données temporaires stockées par ces applications.
-
-Ce que le Script NE Supprime PAS :
-
-    Données de Compte :
-        Les informations de compte Blizzard ne sont pas affectées, car elles sont stockées sur les serveurs Blizzard.
-
-    Fichiers Non Connexes :
-        Le script ne supprime pas les fichiers et dossiers liés à d'autres programmes ou jeux, ni les fichiers personnels de l'utilisateur.
+    Améliorer le Diagnostic : Fournir des messages d'erreur détaillés pour aider à identifier les problèmes si une opération échoue.
+    Assurer une Exécution Robuste : S'assurer que le script donne un retour d'information utile et précis en cas d'erreurs lors de la suppression des fichiers et des clés de registre.
