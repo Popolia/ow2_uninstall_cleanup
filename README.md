@@ -59,11 +59,26 @@ Affichage du Message de Fin :
 
 Cette partie affiche un message indiquant que le nettoyage est terminé et met en pause le script pour que vous puissiez voir le message avant que la fenêtre de commande ne se ferme.
 
+PAth:
+
+Avertissement et Instructions :
+
+    Ajout d’un avertissement avant la suppression, pour rappeler à l’utilisateur de sauvegarder les données importantes et mentionner que le redémarrage peut être utile mais n'est pas strictement nécessaire.
+
+Suppression des Clés de Registre :
+
+    Les commandes reg delete sont ajoutées pour supprimer les clés de registre spécifiques. Les redirections >nul 2>&1 cachent les messages de succès ou d'erreur pour une sortie plus propre.
+
+Nettoyage des Messages :
+
+    Ajout d'un message de fin et pause pour permettre à l'utilisateur de voir que le script a terminé son exécution.
+
 Ce que le Script Supprime :
 
     Dossiers d'Installation :
         Overwatch 2 : Supprime le dossier d'installation principal du jeu.
         Battle.net : Supprime le client Battle.net et ses fichiers d'installation (si présents).
+        Suppression des Clés de Registre
 
     Fichiers de Configuration et de Cache :
         Supprime les dossiers contenant les fichiers de configuration et de cache pour Blizzard et Battle.net. Cela peut inclure les paramètres personnels du jeu, les fichiers de configuration utilisateur, et les données temporaires stockées par ces applications.
