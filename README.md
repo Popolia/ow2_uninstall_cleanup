@@ -1,12 +1,13 @@
 Ce script est conçu pour supprimer complètement Overwatch 2 et tous les fichiers associés sur votre système, ainsi que pour nettoyer les configurations et caches liés à Blizzard et Battle.net
 Ce que fait le Script:
 
-    Déclaration des Variables :
+Déclaration des Variables :
+
         APPDATA_PATH et LOCALAPPDATA_PATH : Définissent les chemins pour les dossiers de configuration utilisateur.
         OVERWATCH_PATH : Spécifie le chemin d'installation d'Overwatch 2.
         BATTLE_NET_PATH : Spécifie le chemin d'installation de Battle.net (le client de Blizzard).
 
-    Suppression des Dossiers de Jeu :
+Suppression des Dossiers de Jeu :
 
         Overwatch 2 :
 
@@ -25,8 +26,8 @@ Battle.net :
     ) else (
         echo Le dossier Battle.net n'existe pas.
     )
-
-    Cette partie vérifie si le dossier d'installation de Battle.net existe. Si c'est le cas, il supprime le dossier et tout son contenu. Sinon, il affiche un message indiquant que le dossier n'existe pas.
+ 
+Cette partie vérifie si le dossier d'installation de Battle.net existe. Si c'est le cas, il supprime le dossier et tout son contenu. Sinon, il affiche un message indiquant que le dossier n'existe pas.
 
 Suppression des Fichiers de Cache et de Configuration :
 
@@ -41,15 +42,15 @@ Battle.net dans LOCALAPPDATA et APPDATA :
 
     rd /s /q "%LOCALAPPDATA_PATH%\Battle.net"
     rd /s /q "%APPDATA_PATH%\Battle.net"
-
-    Ces lignes suppriment les dossiers Battle.net dans les répertoires Local et Roaming. Ces dossiers contiennent les paramètres et les fichiers de cache du client Battle.net.
+  
+Ces lignes suppriment les dossiers Battle.net dans les répertoires Local et Roaming. Ces dossiers contiennent les paramètres et les fichiers de cache du client Battle.net.
 
 Affichage du Message de Fin :
 
     echo Nettoyage terminé.
     pause
 
-    Cette partie affiche un message indiquant que le nettoyage est terminé et met en pause le script pour que vous puissiez voir le message avant que la fenêtre de commande ne se ferme.
+Cette partie affiche un message indiquant que le nettoyage est terminé et met en pause le script pour que vous puissiez voir le message avant que la fenêtre de commande ne se ferme.
 
 Ce que le Script Supprime :
 
