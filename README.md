@@ -12,14 +12,10 @@ Ce que fait le Script
 
         Overwatch 2 :
 
-        batch
-
-if exist "%OVERWATCH_PATH%" (
+        batch  if exist "%OVERWATCH_PATH%" (
     echo Suppression du dossier Overwatch...
-    rd /s /q "%OVERWATCH_PATH%"
-) else (
-    echo Le dossier Overwatch n'existe pas.
-)
+    rd /s /q "%OVERWATCH_PATH%") else (
+    echo Le dossier Overwatch n'existe pas.)
 
 Cette partie vérifie si le dossier d'installation d'Overwatch 2 existe. Si c'est le cas, il supprime le dossier et tout son contenu. Sinon, il affiche un message indiquant que le dossier n'existe pas.
 
