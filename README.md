@@ -10,7 +10,6 @@ Fonctionnalités
     Suppression des dossiers Overwatch 2 et Battle.net.
     Nettoyage des fichiers de cache et de configuration.
     Suppression des clés de registre liées à Blizzard Entertainment.
-    Suppression des raccourcis sur le bureau et dans le menu Démarrer.
     Vérification des traces restantes sur les lecteurs et option de suppression.
 
 Utilisation
