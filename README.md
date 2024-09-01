@@ -25,8 +25,8 @@ Utilisation
     c'est votre lettre du disque dure ou il est intaller de base c'est "c" mais certain ordinateur
     on une autre configuration.
     
-⚠️ A savoir : vous pouver chercher sur plusieur disque , si vous avez pars exemple installer sur le c vous avez eu un problemme vous l'avez telecharger sur d , mais vous avez tjr le problemme est vous voulez etre sure que sur le disque C et D il y a plus battle .net ou owerwatch bin vous marquer c d (lettre du disque , espace , 
-    lettre de l'autrer disque) ⚠️ puis entrer
+⚠️ A savoir : vous pouver chercher sur plusieur disque , si vous avez pars exemple installer sur le c vous avez eu un problemme vous l'avez telecharger sur d , mais vous avez tjr le problemme est vous voulez etre sure que sur le disque C et D il y a plus battle .net ou owerwatch bin vous marquer c d (lettre du disque espace  
+    lettre de l'autre disque) ⚠️ puis entrer
     
     3.03/Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix o/n :
     soit vous faite o , alors les dossier seront supprimer 
