@@ -20,7 +20,6 @@ if "%IS_ADMIN%"=="0" (
 set "APPDATA_PATH=%userprofile%\AppData\Roaming"
 set "LOCALAPPDATA_PATH=%userprofile%\AppData\Local"
 set "DOWNLOADS_PATH=%userprofile%\Downloads"
-set "PARAMETRE_PATH=%DOWNLOADS_PATH%\parametre ow2"
 set "OVERWATCH_PATH=%ProgramFiles(x86)%\Overwatch"
 set "BATTLE_NET_PATH=%ProgramFiles(x86)%\Battle.net"
 set "SETUP_FILE=%DOWNLOADS_PATH%\Battle.net-Setup.exe"
