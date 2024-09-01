@@ -22,7 +22,8 @@ Utilisation
     soit:
     3.01/Souhaitez-vous continuer ? (O/N)  du coup o
     3.02/Entrez les lettres des lecteurs a scanner, separees par des espaces (ex: C D E): ,
-    c'est votre lettre du disque dure ou il est intaller de base c'est "c" mais certain ordinateur on une autre configuration.
+    c'est votre lettre du disque dure ou il est intaller de base c'est "c" mais certain ordinateur
+    on une autre configuration.
     
 ⚠️ A savoir : vous pouver chercher sur plusieur disque , si vous avez pars exemple installer sur le c vous avez eu un problemme vous l'avez telecharger sur d , mais vous avez tjr le problemme est vous voulez etre sure que sur le disque C et D il y a plus battle .net ou owerwatch bin vous marquer c d (lettre du disque , espace , 
     lettre de l'autrer disque) ⚠️ puis entrer
@@ -39,4 +40,5 @@ Avertissements
     Ce script doit être exécuté avec des droits administratifs pour fonctionner correctement.
     (de tout maniere il vous demanderat automatiquement ^-^)
     Assurez-vous de sauvegarder toutes les données importantes avant d'exécuter le script.
-    celat peut etre long ne paniquer pas c'est normal il cherche tous se qui est associé a Overwatch 2 et Battle.net
+    celat peut etre long 
+    ne paniquer pas c'est normal il cherche tous se qui est associé a Overwatch 2 et Battle.net
