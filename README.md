@@ -10,8 +10,7 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
   [![Télécharger le fichier](https://github.com/user-attachments/assets/4c318b41-f48c-4751-8fa6-2265e0156ff1)](https://github.com/Popolia/ow2_uninstall_cleanup.bat/archive/refs/heads/main.zip)
 
-- Le script doit être exécuté avec des privilèges administratifs.
-  Il est nécessaire d'utiliser des privilèges administratifs pour exécuter le script.
+- Il est nécessaire d'utiliser des privilèges administratifs pour exécuter le script.
   (Si vous ne le faites pas, il vous le demandera automatiquement).
 
 - Extraire l'archive.
@@ -19,16 +18,20 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 ## Fonctionnalités
 
 1. **Vérification des droits administratifs** : Le script vérifie si l'utilisateur a des privilèges administratifs et redémarre le script avec des droits élevés si nécessaire.
+   
 2. **Déplacement des fichiers** : Déplace le dossier Overwatch du répertoire Documents vers le répertoire Téléchargements.
+   
 3. **Suppression des fichiers et dossiers** :
    - Supprime les fichiers d'installation et les dossiers associés à Overwatch 2.
    - Supprime les fichiers de cache et de configuration liés à Blizzard et Battle.net.
    - Supprime les raccourcis liés à Overwatch et Battle.net du bureau et du menu Démarrer.
+     
 4. **Nettoyage des traces restantes** : Vérifie les lecteurs spécifiés pour tout fichier ou dossier restant associé à Overwatch, Battle.net, ou Blizzard et propose de les supprimer.
 
 ## Comment Exécuter le Script
 
 1. **Télécharger le script** : Sauvegardez le code fourni dans un fichier avec l'extension `.bat`, par exemple `uninstall_overwatch.bat`.
+
 2. **Exécuter le script** : 
    - Faites un clic droit sur le fichier `.bat` et sélectionnez "Exécuter en tant qu'administrateur" ou lancer le tout cours il s'adaptera est vous demanderat l'autorisation administrateur .
    - Suivez les instructions à l'écran pour procéder à la désinstallation.
@@ -36,8 +39,11 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 ## Instructions
 
 1. **Confirmation** : Le script vous demandera de confirmer que vous souhaitez procéder à la désinstallation.
+
 2. **Sélection des lecteurs** : Vous serez invité à entrer les lettres des lecteurs que vous souhaitez scanner pour détecter les fichiers restants d'Overwatch et de Battle.net.
+
 3. **Progression** : Le script affiche la progression de chaque étape de la désinstallation.
+
 4. **Vérification finale** : Après la suppression des fichiers, le script vérifie les lecteurs spécifiés pour tout fichier ou dossier restant et vous permet de les supprimer si nécessaire.
 
 ## Notes
