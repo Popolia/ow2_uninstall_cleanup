@@ -35,7 +35,10 @@ Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa spurrim
 
 ## Notes
 
-- **Sécurité** : Assurez-vous d'avoir des sauvegardes des fichiers importants avant d'exécuter ce script.
+- **Sécurité** : Un dossier " parametre " va aparaitre dans " Téléchargements " , c'est votre dossier "Overwatch" avec vos log et Settings
+
+![image](https://github.com/user-attachments/assets/e373d614-42f6-4429-8cd4-df70bc45bfbb)
+
 - **Dépannage** : Si vous rencontrez des problèmes, vérifiez les permissions des dossiers et assurez-vous que vous avez suffisamment d'espace disque.
 
 ## Exemple d'Exécution
