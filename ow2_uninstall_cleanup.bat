@@ -8,7 +8,7 @@ set "IS_ADMIN=0"
 openfiles >nul 2>&1 && set "IS_ADMIN=1"
 
 if "%IS_ADMIN%"=="0" (
-    echo Ce script doit être execute en tant qu'administrateur.
+    echo Ce script doit etre execute en tant qu'administrateur.
     echo Redemarrage du script avec des privileges administratifs...
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
@@ -25,12 +25,8 @@ set "BATTLE_NET_PATH=%ProgramFiles(x86)%\Battle.net"
 set "SETUP_FILE=%DOWNLOADS_PATH%\Battle.net-Setup.exe"
 set "DESKTOP_PATH=%userprofile%\Desktop"
 set "START_MENU_PATH=%appdata%\Microsoft\Windows\Start Menu\Programs"
-
-:: Creation du repertoire de sauvegarde des parametres
-if not exist "%PARAMETRE_PATH%" (
-    echo Creation du repertoire de sauvegarde : "%PARAMETRE_PATH%"
-    mkdir "%PARAMETRE_PATH%"
-)
+set "DOCUMENTS_OVERWATCH_PATH=%userprofile%\Documents\Overwatch"
+set "PARAMETRE_PATH=%DOWNLOADS_PATH%\parametre"
 
 :: ====================================================
 :: Verification et confirmation
@@ -39,7 +35,6 @@ echo =========================================
 echo Desinstallation d'Overwatch 2 et suppression des fichiers residuels
 echo =========================================
 echo Ce script va supprimer les fichiers d'Overwatch 2 et de Battle.net ainsi que leurs fichiers residuels.
-echo Les parametres seront sauvegardes dans : "%PARAMETRE_PATH%"
 echo Souhaitez-vous continuer ? (O/N)
 set /p CONFIRM="Votre choix : "
 if /i not "%CONFIRM%"=="O" (
@@ -64,9 +59,31 @@ if "%DRIVES%"=="" (
 )
 
 :: ====================================================
+:: Deplacement du dossier Overwatch dans Documents vers Telechargements
+:: ====================================================
+echo [Progression] Deplacement du dossier Overwatch de Documents vers Telechargements...
+if exist "%DOCUMENTS_OVERWATCH_PATH%" (
+    mkdir "%PARAMETRE_PATH%" >nul 2>&1
+    echo [Debug] Creation du dossier parametre dans Telechargements : %errorlevel%
+    xcopy "%DOCUMENTS_OVERWATCH_PATH%" "%PARAMETRE_PATH%\Overwatch" /E /I /H /Y >nul 2>&1
+    if exist "%PARAMETRE_PATH%\Overwatch" (
+        rd /s /q "%DOCUMENTS_OVERWATCH_PATH%" >nul 2>&1
+        echo [##        ] Dossier Overwatch copie et supprime de Documents.
+    ) else (
+        echo [##        ] Echec de la copie du dossier Overwatch.
+        echo Verifiez les permissions et l'espace disque disponible.
+        echo Essayez de copier manuellement le dossier et relancez le script.
+        pause
+        exit /b
+    )
+) else (
+    echo [##        ] Le dossier Overwatch n'existe pas dans Documents.
+)
+set /a PROGRESS+=10
+
+:: ====================================================
 :: Suppression du fichier Battle.net-Setup.exe s'il existe
 :: ====================================================
-set /a PROGRESS=10
 echo [Progression] Suppression du fichier Battle.net-Setup.exe...
 if exist "%SETUP_FILE%" (
     del /q "%SETUP_FILE%"
