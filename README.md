@@ -35,7 +35,8 @@ Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa spurrim
 
 ## Notes
 
-- **Sécurité** : Un dossier " parametre " va aparaitre dans " Téléchargements " , c'est votre dossier "Overwatch" avec vos log et Settings
+- **Sécurité** : Un dossier " parametre " va aparaitre dans " Téléchargements " , c'est votre dossier "Overwatch" avec vos log et Settings ,....
+
 
 ![image](https://github.com/user-attachments/assets/e373d614-42f6-4429-8cd4-df70bc45bfbb)
 
