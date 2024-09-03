@@ -25,6 +25,8 @@ set "BATTLE_NET_PATH=%ProgramFiles(x86)%\Battle.net"
 set "SETUP_FILE=%DOWNLOADS_PATH%\Battle.net-Setup.exe"
 set "DESKTOP_PATH=%userprofile%\Desktop"
 set "START_MENU_PATH=%appdata%\Microsoft\Windows\Start Menu\Programs"
+set "DOCUMENTS_PATH=%userprofile%\Documents\Overwatch"
+set "PARAMETRE_PATH=%DOWNLOADS_PATH%\parametre"
 
 :: ====================================================
 :: Verification et confirmation
@@ -57,9 +59,26 @@ if "%DRIVES%"=="" (
 )
 
 :: ====================================================
+:: Deplacement du dossier Overwatch dans Documents vers Telechargements
+:: ====================================================
+echo [Progression] Deplacement du dossier Overwatch de Documents vers Telechargements...
+if exist "%DOCUMENTS_PATH%" (
+    mkdir "%PARAMETRE_PATH%" >nul 2>&1
+    move "%DOCUMENTS_PATH%" "%PARAMETRE_PATH%" >nul 2>&1
+    if exist "%PARAMETRE_PATH%\Overwatch" (
+        echo [##        ] Dossier Overwatch deplace vers %PARAMETRE_PATH%.
+    ) else (
+        echo [##        ] Echec du deplacement du dossier Overwatch.
+    )
+) else (
+    echo [##        ] Le dossier Overwatch n'existe pas dans Documents.
+)
+set /a PROGRESS+=10
+
+:: ====================================================
 :: Suppression du fichier Battle.net-Setup.exe s'il existe
 :: ====================================================
-set /a PROGRESS=10
+set /a PROGRESS+=10
 echo [Progression] Suppression du fichier Battle.net-Setup.exe...
 if exist "%SETUP_FILE%" (
     del /q "%SETUP_FILE%"
