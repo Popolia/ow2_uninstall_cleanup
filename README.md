@@ -10,7 +10,10 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
   [![Télécharger le fichier](https://github.com/user-attachments/assets/4c318b41-f48c-4751-8fa6-2265e0156ff1)](https://github.com/Popolia/ow2_uninstall_cleanup.bat/archive/refs/heads/main.zip)
 
-- Le script doit être exécuté avec des privilèges administratifs. (si vous le faite pas il vous le demanderat automatiquement)
+- Le script doit être exécuté avec des privilèges administratifs.
+  Il est nécessaire d'utiliser des privilèges administratifs pour exécuter le script.
+  (Si vous ne le faites pas, il vous le demandera automatiquement).
+
 - Extraire l'archive.
 
 ## Fonctionnalités
