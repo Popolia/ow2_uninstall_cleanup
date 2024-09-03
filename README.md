@@ -5,7 +5,7 @@ Il supprime également les fichiers résiduels liés à Battle.net et Blizzard E
 Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa spurrime que Blizzard et Ow2
 
 ## Prérequis
-
+# [![ow2_uninstall_cleanup.bat](ArtSource/DownloadButton.png "Download Releases")](https://github.com/Popolia/ow2_uninstall_cleanup.bat/archive/refs/heads/main.zip)
 - Le script doit être exécuté avec des privilèges administratifs. (si vous le faite pas il vous le demanderat automatiquement)
 - Extraire l'archive.
 
