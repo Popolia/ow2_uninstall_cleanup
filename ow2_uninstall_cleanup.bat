@@ -25,7 +25,7 @@ set "BATTLE_NET_PATH=%ProgramFiles(x86)%\Battle.net"
 set "SETUP_FILE=%DOWNLOADS_PATH%\Battle.net-Setup.exe"
 set "DESKTOP_PATH=%userprofile%\Desktop"
 set "START_MENU_PATH=%appdata%\Microsoft\Windows\Start Menu\Programs"
-set "DOCUMENTS_PATH=%userprofile%\Documents\Overwatch"
+set "DOCUMENTS_OVERWATCH_PATH=%userprofile%\Documents\Overwatch"
 set "PARAMETRE_PATH=%DOWNLOADS_PATH%\parametre"
 
 :: ====================================================
@@ -62,13 +62,19 @@ if "%DRIVES%"=="" (
 :: Deplacement du dossier Overwatch dans Documents vers Telechargements
 :: ====================================================
 echo [Progression] Deplacement du dossier Overwatch de Documents vers Telechargements...
-if exist "%DOCUMENTS_PATH%" (
+if exist "%DOCUMENTS_OVERWATCH_PATH%" (
     mkdir "%PARAMETRE_PATH%" >nul 2>&1
-    move "%DOCUMENTS_PATH%" "%PARAMETRE_PATH%" >nul 2>&1
+    echo [Debug] Creation du dossier parametre dans Telechargements : %errorlevel%
+    xcopy "%DOCUMENTS_OVERWATCH_PATH%" "%PARAMETRE_PATH%\Overwatch" /E /I /H /Y >nul 2>&1
     if exist "%PARAMETRE_PATH%\Overwatch" (
-        echo [##        ] Dossier Overwatch deplace vers %PARAMETRE_PATH%.
+        rd /s /q "%DOCUMENTS_OVERWATCH_PATH%" >nul 2>&1
+        echo [##        ] Dossier Overwatch copie et supprime de Documents.
     ) else (
-        echo [##        ] Echec du deplacement du dossier Overwatch.
+        echo [##        ] Echec de la copie du dossier Overwatch.
+        echo Verifiez les permissions et l'espace disque disponible.
+        echo Essayez de copier manuellement le dossier et relancez le script.
+        pause
+        exit /b
     )
 ) else (
     echo [##        ] Le dossier Overwatch n'existe pas dans Documents.
@@ -78,7 +84,6 @@ set /a PROGRESS+=10
 :: ====================================================
 :: Suppression du fichier Battle.net-Setup.exe s'il existe
 :: ====================================================
-set /a PROGRESS+=10
 echo [Progression] Suppression du fichier Battle.net-Setup.exe...
 if exist "%SETUP_FILE%" (
     del /q "%SETUP_FILE%"
@@ -113,10 +118,10 @@ set /a PROGRESS+=10
 :: Suppression des fichiers de cache et de configuration
 :: ====================================================
 echo [Progression] Suppression des fichiers de cache et de configuration...
-rd /s /q "%LOCALAPPDATA_PATH%\Blizzard" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Blizzard" >nul 2>&1
-rd /s /q "%LOCALAPPDATA_PATH%\Battle.net" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Battle.net" >nul 2>&1
+rd /s /q "%LOCALAPPDATA_PATH%\Blizzard%" >nul 2>&1
+rd /s /q "%APPDATA_PATH%\Blizzard%" >nul 2>&1
+rd /s /q "%LOCALAPPDATA_PATH%\Battle.net%" >nul 2>&1
+rd /s /q "%APPDATA_PATH%\Battle.net%" >nul 2>&1
 set /a PROGRESS+=20
 echo [##        ] %PROGRESS%%% - Fichiers de cache et de configuration supprimes.
 
@@ -174,7 +179,7 @@ if not defined FILES_TO_DELETE (
     echo !FILES_TO_DELETE!
     echo.
     echo Souhaitez-vous supprimer ces fichiers et dossiers ? (O/N)
-    set /p USER_CHOICE="Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix (O/N) : "
+    set /p USER_CHOICE="Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix o/n : "
     
     if /i "%USER_CHOICE%"=="O" (
         echo Suppression en cours...
