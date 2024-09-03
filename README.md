@@ -2,7 +2,7 @@
 
 Ce script batch est conçu pour désinstaller Overwatch 2 ainsi que ses fichiers et paramètres associés sur un système Windows.
 Il supprime également les fichiers résiduels liés à Battle.net et Blizzard Entertainment.
-Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa spurrime que Blizzard et Ow2
+Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa supprime que Blizzard et Ow2
 
 ## Prérequis:
 - Ow2_uninstall_cleanup.bat
