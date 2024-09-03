@@ -8,7 +8,7 @@ set "IS_ADMIN=0"
 openfiles >nul 2>&1 && set "IS_ADMIN=1"
 
 if "%IS_ADMIN%"=="0" (
-    echo Ce script doit être execute en tant qu'administrateur.
+    echo Ce script doit etre execute en tant qu'administrateur.
     echo Redemarrage du script avec des privileges administratifs...
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
@@ -26,12 +26,6 @@ set "SETUP_FILE=%DOWNLOADS_PATH%\Battle.net-Setup.exe"
 set "DESKTOP_PATH=%userprofile%\Desktop"
 set "START_MENU_PATH=%appdata%\Microsoft\Windows\Start Menu\Programs"
 
-:: Creation du repertoire de sauvegarde des parametres
-if not exist "%PARAMETRE_PATH%" (
-    echo Creation du repertoire de sauvegarde : "%PARAMETRE_PATH%"
-    mkdir "%PARAMETRE_PATH%"
-)
-
 :: ====================================================
 :: Verification et confirmation
 :: ====================================================
@@ -39,7 +33,6 @@ echo =========================================
 echo Desinstallation d'Overwatch 2 et suppression des fichiers residuels
 echo =========================================
 echo Ce script va supprimer les fichiers d'Overwatch 2 et de Battle.net ainsi que leurs fichiers residuels.
-echo Les parametres seront sauvegardes dans : "%PARAMETRE_PATH%"
 echo Souhaitez-vous continuer ? (O/N)
 set /p CONFIRM="Votre choix : "
 if /i not "%CONFIRM%"=="O" (
@@ -101,10 +94,10 @@ set /a PROGRESS+=10
 :: Suppression des fichiers de cache et de configuration
 :: ====================================================
 echo [Progression] Suppression des fichiers de cache et de configuration...
-rd /s /q "%LOCALAPPDATA_PATH%\Blizzard%" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Blizzard%" >nul 2>&1
-rd /s /q "%LOCALAPPDATA_PATH%\Battle.net%" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Battle.net%" >nul 2>&1
+rd /s /q "%LOCALAPPDATA_PATH%\Blizzard" >nul 2>&1
+rd /s /q "%APPDATA_PATH%\Blizzard" >nul 2>&1
+rd /s /q "%LOCALAPPDATA_PATH%\Battle.net" >nul 2>&1
+rd /s /q "%APPDATA_PATH%\Battle.net" >nul 2>&1
 set /a PROGRESS+=20
 echo [##        ] %PROGRESS%%% - Fichiers de cache et de configuration supprimes.
 
@@ -162,7 +155,7 @@ if not defined FILES_TO_DELETE (
     echo !FILES_TO_DELETE!
     echo.
     echo Souhaitez-vous supprimer ces fichiers et dossiers ? (O/N)
-    set /p USER_CHOICE="Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix o/n : "
+    set /p USER_CHOICE="Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix (O/N) : "
     
     if /i "%USER_CHOICE%"=="O" (
         echo Suppression en cours...
