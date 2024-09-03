@@ -14,7 +14,8 @@ Fonctionnalités
 
 Utilisation
 
-    1/Téléchargez le script.
+    1/Téléchargez le script. 
+    1.5/ Extraire le fichier
     2/Exécutez-le avec des privilèges administratifs , si vous le faite pas il vous
     demanderat automatiquement l'autorisation.
     3/Suivez les instructions à l'écran pour confirmer la désinstallation
