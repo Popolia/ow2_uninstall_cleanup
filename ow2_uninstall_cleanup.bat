@@ -28,6 +28,9 @@ set "START_MENU_PATH=%appdata%\Microsoft\Windows\Start Menu\Programs"
 set "DOCUMENTS_OVERWATCH_PATH=%userprofile%\Documents\Overwatch"
 set "PARAMETRE_PATH=%DOWNLOADS_PATH%\parametre"
 
+:: Initialisation du progrès
+set "PROGRESS=0"
+
 :: ====================================================
 :: Verification et confirmation
 :: ====================================================
