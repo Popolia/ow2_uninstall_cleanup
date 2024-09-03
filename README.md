@@ -1,44 +1,49 @@
-Overwatch 2 Uninstaller Script
+# Script de Désinstallation d'Overwatch 2 et Nettoyage Associé
 
-Description
+Ce script batch est conçu pour désinstaller Overwatch 2 ainsi que ses fichiers et paramètres associés sur un système Windows.
+Il supprime également les fichiers résiduels liés à Battle.net et Blizzard Entertainment.
+Bien evidement tout les jeux qui sont lié a blizzard reste sur le pc sa spurrime que Blizzard et Ow2
 
-⚠️Ce script batch est conçu pour désinstaller uniquement "Overwatch 2" et "Battle.net" ainsi que les fichiers résiduels associés. Il effectue également une vérification des fichiers restants sur les lecteurs spécifiés et propose de les supprimer ⚠️
+## Prérequis
 
-Fonctionnalités
+- Le script doit être exécuté avec des privilèges administratifs. (si vous le faite pas il vous le demanderat automatiquement)
+- Extraire l'archive.
 
-    Vérification et élévation des droits administratifs.
-    Suppression des dossiers Overwatch 2 et Battle.net.
-    Nettoyage des fichiers de cache et de configuration.
-    Suppression des clés de registre liées à Blizzard Entertainment.
-    Vérification des traces restantes sur les lecteurs et option de suppression.
+## Fonctionnalités
 
-Utilisation
+1. **Vérification des droits administratifs** : Le script vérifie si l'utilisateur a des privilèges administratifs et redémarre le script avec des droits élevés si nécessaire.
+2. **Déplacement des fichiers** : Déplace le dossier Overwatch du répertoire Documents vers le répertoire Téléchargements.
+3. **Suppression des fichiers et dossiers** :
+   - Supprime les fichiers d'installation et les dossiers associés à Overwatch 2.
+   - Supprime les fichiers de cache et de configuration liés à Blizzard et Battle.net.
+   - Supprime les raccourcis liés à Overwatch et Battle.net du bureau et du menu Démarrer.
+4. **Nettoyage des traces restantes** : Vérifie les lecteurs spécifiés pour tout fichier ou dossier restant associé à Overwatch, Battle.net, ou Blizzard et propose de les supprimer.
 
-    1/Téléchargez le script. 
-    1.5/ Extraire le fichier
-    2/Exécutez-le avec des privilèges administratifs , si vous le faite pas il vous
-    demanderat automatiquement l'autorisation.
-    3/Suivez les instructions à l'écran pour confirmer la désinstallation
-    et la suppression des fichiers.
-    soit:
-    3.01/Souhaitez-vous continuer ? (O/N)  du coup o
-    3.02/Entrez les lettres des lecteurs a scanner, separees par des espaces (ex: C D E): ,
-    c'est votre lettre du disque dure ou il est intaller de base c'est "c" mais certain ordinateur
-    on une autre configuration.
-    
-⚠️ A savoir : vous pouver chercher sur plusieur disque , si vous avez pars exemple installer sur le c vous avez eu un problemme vous l'avez telecharger sur d , mais vous avez tjr le problemme est vous voulez etre sure que sur le disque C et D il y a plus battle .net ou owerwatch 
-bin vous marquer : " c d " (lettre du disque espace lettre de l'autre disque)  puis entrer ⚠️
-    
-    3.03/Souhaitez-vous supprimer ces fichiers et dossiers ? Votre choix o/n :
-    soit vous faite o , alors les dossier seront supprimer 
-    soit vous faite n pour annuler , 
-    c'est juste une confirmation.
+## Comment Exécuter le Script
 
-Avertissements
+1. **Télécharger le script** : Sauvegardez le code fourni dans un fichier avec l'extension `.bat`, par exemple `uninstall_overwatch.bat`.
+2. **Exécuter le script** : 
+   - Faites un clic droit sur le fichier `.bat` et sélectionnez "Exécuter en tant qu'administrateur" ou lancer le tout cours il s'adaptera est vous demanderat l'autorisation administrateur .
+   - Suivez les instructions à l'écran pour procéder à la désinstallation.
 
-    Ce script doit être exécuté avec des droits administratifs pour fonctionner correctement.
-    (de tout maniere il vous demanderat automatiquement ^-^)
-    Assurez-vous de sauvegarder toutes les données importantes avant d'exécuter le script.
-    celat peut etre long 
-    ne paniquer pas c'est normal il cherche tous se qui est associé a Overwatch 2 et Battle.net
-    vous aurez alors : Veuillez patienter, une verification est en cours sur le lecteur  " C ou D ou E......"
+## Instructions
+
+1. **Confirmation** : Le script vous demandera de confirmer que vous souhaitez procéder à la désinstallation.
+2. **Sélection des lecteurs** : Vous serez invité à entrer les lettres des lecteurs que vous souhaitez scanner pour détecter les fichiers restants d'Overwatch et de Battle.net.
+3. **Progression** : Le script affiche la progression de chaque étape de la désinstallation.
+4. **Vérification finale** : Après la suppression des fichiers, le script vérifie les lecteurs spécifiés pour tout fichier ou dossier restant et vous permet de les supprimer si nécessaire.
+
+## Notes
+
+- **Sécurité** : Assurez-vous d'avoir des sauvegardes des fichiers importants avant d'exécuter ce script.
+- **Dépannage** : Si vous rencontrez des problèmes, vérifiez les permissions des dossiers et assurez-vous que vous avez suffisamment d'espace disque.
+
+## Exemple d'Exécution
+
+![image](https://github.com/user-attachments/assets/e606957d-5b02-4393-996d-9b60f6106e6a)
+
+![image](https://github.com/user-attachments/assets/293a8078-5246-4428-8cf0-8769a1783d3b)
+
+![image](https://github.com/user-attachments/assets/c236dfeb-4fdf-418b-ac79-d6bb7fbdcc0a)
+
+![image](https://github.com/user-attachments/assets/68074212-dea1-417f-b4f9-838e8d4e00c3)
