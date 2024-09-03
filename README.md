@@ -2,7 +2,7 @@
 
 Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre PC. Veuillez noter que :
 
-- **Seuls** Blizzard et Overwatch 2 seront supprimés.
+- **Seuls** Battle.net et Overwatch 2 seront supprimés.
 - **Les autres jeux et applications liés à Blizzard** resteront installé sur votre PC.
 
 ## Prérequis:
