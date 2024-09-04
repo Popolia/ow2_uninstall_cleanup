@@ -19,7 +19,7 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 1. **Vérification des droits administratifs** : Le script vérifie si l'utilisateur a des privilèges administratifs et redémarre le script avec des droits élevés si nécessaire.
    
-2. **Déplacement des fichiers** : Déplace le dossier Overwatch du répertoire Documents vers le répertoire Téléchargements.
+2. **Déplacement des fichiers** : Déplace le dossier Overwatch du répertoire "Documents" vers le répertoire "Téléchargements".
    
 3. **Suppression des fichiers et dossiers** :
    - Supprime les fichiers d'installation et les dossiers associés à Overwatch 2.
