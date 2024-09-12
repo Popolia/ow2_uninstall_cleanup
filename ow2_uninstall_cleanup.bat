@@ -47,19 +47,25 @@ if /i not "%CONFIRM%"=="O" (
 )
 
 :: ====================================================
-:: Selection des lecteurs a scanner
+:: Arret des processus en cours
+:: ====================================================
+echo [Progression] Arret des processus Battle.net et Blizzard...
+taskkill /f /im "Battle.net.exe" >nul 2>&1
+taskkill /f /im "BlizzardUpdateAgent.exe" >nul 2>&1
+taskkill /f /im "Overwatch.exe" >nul 2>&1
+
+:: ====================================================
+:: Scan automatique des lecteurs disponibles
 :: ====================================================
 echo =========================================
-echo Selection des lecteurs a scanner pour Overwatch 2 et Battle.net
+echo Detection automatique des lecteurs disponibles
 echo =========================================
-echo Entrez les lettres des lecteurs a scanner, separees par des espaces (ex: C D E):
-set /p DRIVES="Lecteurs a scanner : "
-
-if "%DRIVES%"=="" (
-    echo Aucun lecteur selectionne. Annulation.
-    pause
-    exit /b
+for /f "skip=1 tokens=1" %%D in ('wmic logicaldisk get name') do (
+    if not "%%D"=="" (
+        set "DRIVES=!DRIVES! %%D"
+    )
 )
+echo Lecteurs detectes : %DRIVES%
 
 :: ====================================================
 :: Deplacement du dossier Overwatch dans Documents vers Telechargements
@@ -121,10 +127,30 @@ set /a PROGRESS+=10
 :: Suppression des fichiers de cache et de configuration
 :: ====================================================
 echo [Progression] Suppression des fichiers de cache et de configuration...
-rd /s /q "%LOCALAPPDATA_PATH%\Blizzard%" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Blizzard%" >nul 2>&1
-rd /s /q "%LOCALAPPDATA_PATH%\Battle.net%" >nul 2>&1
-rd /s /q "%APPDATA_PATH%\Battle.net%" >nul 2>&1
+if exist "%LOCALAPPDATA_PATH%\Blizzard Entertainment" (
+    takeown /f "%LOCALAPPDATA_PATH%\Blizzard Entertainment" /r /d y >nul 2>&1
+    icacls "%LOCALAPPDATA_PATH%\Blizzard Entertainment" /grant "%username%":F /t >nul 2>&1
+    rd /s /q "%LOCALAPPDATA_PATH%\Blizzard Entertainment" >nul 2>&1
+    if exist "%LOCALAPPDATA_PATH%\Blizzard Entertainment" (
+        echo [Erreur] Impossible de supprimer %LOCALAPPDATA_PATH%\Blizzard Entertainment.
+    ) else (
+        echo [##        ] Dossier Blizzard Entertainment supprime dans Local.
+    )
+)
+
+if exist "%APPDATA_PATH%\Blizzard Entertainment" (
+    takeown /f "%APPDATA_PATH%\Blizzard Entertainment" /r /d y >nul 2>&1
+    icacls "%APPDATA_PATH%\Blizzard Entertainment" /grant "%username%":F /t >nul 2>&1
+    rd /s /q "%APPDATA_PATH%\Blizzard Entertainment" >nul 2>&1
+    if exist "%APPDATA_PATH%\Blizzard Entertainment" (
+        echo [Erreur] Impossible de supprimer %APPDATA_PATH%\Blizzard Entertainment.
+    ) else (
+        echo [##        ] Dossier Blizzard Entertainment supprime dans Roaming.
+    )
+)
+
+rd /s /q "%LOCALAPPDATA_PATH%\Battle.net" >nul 2>&1
+rd /s /q "%APPDATA_PATH%\Battle.net" >nul 2>&1
 set /a PROGRESS+=20
 echo [##        ] %PROGRESS%%% - Fichiers de cache et de configuration supprimes.
 
@@ -144,8 +170,10 @@ echo [##        ] %PROGRESS%%% - Cles de registre supprimees.
 echo [Progression] Suppression des raccourcis sur le bureau et dans le menu Demarrer...
 for %%R in ("%DESKTOP_PATH%\Overwatch*.lnk" "%DESKTOP_PATH%\Battle.net*.lnk" "%START_MENU_PATH%\Overwatch*.lnk" "%START_MENU_PATH%\Battle.net*.lnk") do (
     if exist %%R (
-        del /q %%R
+        del /f /q %%R
         echo [##        ] Raccourci %%R supprime.
+    ) else (
+        echo [##        ] Aucun raccourci %%R trouve.
     )
 )
 set /a PROGRESS+=10
