@@ -15,7 +15,11 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 - Extraire l'archive.
 
-- Supprimer_raccourcis.ps1 et .bat a mettre dans telechargement pour l'executer 
+- Supprimer_raccourcis.ps1 et .bat à mettre dans telechargement pour l'exécuter 
+  .bat permet de lancer le script. 
+  .ps1 permet de raser les raccourcit blanc du menu Démarrer et du Bureau, à la fois pour l'utilisateur actuel et pour tous les utilisateurs. 
+   `Comme ça, je ne touche pas au .bat qui fonctionne est plus tard au pire, je fusionnerais si je vois que c'est compliqué pour les gens
+   c'est le patch en attendant que je résout dans le .bat`
 
 ## Fonctionnalités
 
