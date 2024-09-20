@@ -15,6 +15,8 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 - Extraire l'archive.
 
+- Supprimer_raccourcis.ps1 et .bat a mettre dans telechargement pour l'executer 
+
 ## Fonctionnalités
 
 1. **Vérification des droits administratifs** : Le script vérifie si l'utilisateur a des privilèges administratifs et redémarre le script avec des droits élevés si nécessaire.
