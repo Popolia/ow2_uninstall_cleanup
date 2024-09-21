@@ -15,7 +15,9 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 - Extraire l'archive.
 
-- Exécuter Supprimer_raccourcis.exe apres le .bat
+- Exécuter ow2_uninstall_cleanup.EXE
+
+- Puis Exécuter Supprimer_raccourcis.exe apres ow2_uninstall_cleanup.EXE
 
 ## Fonctionnalités
 
