@@ -1,2 +1,0 @@
-Convert .bat to .exe
-script PowerShell (.ps1) en Exécutable (.exe)
