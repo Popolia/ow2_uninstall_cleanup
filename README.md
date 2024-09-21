@@ -6,7 +6,7 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 - **Les autres jeux et applications liés à Blizzard** resteront installé sur votre PC.
 
 ## Prérequis:
-- Ow2_uninstall_cleanup.bat
+- Pack:
 
   [![Télécharger le fichier](https://github.com/user-attachments/assets/4c318b41-f48c-4751-8fa6-2265e0156ff1)](https://github.com/Popolia/ow2_uninstall_cleanup.bat/archive/refs/heads/main.zip)
 
