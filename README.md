@@ -2,11 +2,12 @@
 
 Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre PC. Veuillez noter que :
 
-- **Seuls** " Battle.net " et " Overwatch 2 " seront supprimés.
-- **Les autres jeux et applications liés à Blizzard** resteront installé sur votre PC.
+- **Seuls** "Battle.net" et "Overwatch 2" seront supprimés.
+- **Les autres jeux et applications liés à Blizzard** resteront installés sur votre PC.
 
-## Prérequis:
-- Pack:
+## Prérequis
+
+- Pack :
 
   [![Télécharger le fichier](https://github.com/user-attachments/assets/4c318b41-f48c-4751-8fa6-2265e0156ff1)](https://github.com/Popolia/ow2_uninstall_cleanup.bat/archive/refs/heads/main.zip)
 
@@ -15,9 +16,9 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 - Extraire l'archive.
 
-- Exécuter ow2_uninstall_cleanup.EXE
+- Exécuter `ow2_uninstall_cleanup.EXE`.
 
-- Puis Exécuter Supprimer_raccourcis.exe apres avoir terminer avec ow2_uninstall_cleanup.EXE
+- Puis exécuter `Supprimer_raccourcis.exe` après avoir terminé avec `ow2_uninstall_cleanup.EXE`.
 
 ## Fonctionnalités
 
@@ -37,7 +38,7 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 1. **Télécharger le script** : Sauvegardez le code fourni dans un fichier avec l'extension `.bat`, par exemple `uninstall_overwatch.bat`.
 
 2. **Exécuter le script** : 
-   - Faites un clic droit sur le fichier `.bat` et sélectionnez "Exécuter en tant qu'administrateur" ou lancer le tout court il s'adaptera et vous demandera " l'autorisation administrateur " .
+   - Faites un clic droit sur le fichier `.bat` et sélectionnez "Exécuter en tant qu'administrateur" ou lancez-le directement, il s'adaptera et vous demandera "l'autorisation administrateur".
    - Suivez les instructions à l'écran pour procéder à la désinstallation.
 
 ## Instructions
@@ -52,19 +53,14 @@ Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre
 
 ## Notes
 
-- ⚠️**Sécurité** : Un dossier " parametre " va apparaître dans " Téléchargements " , c'est votre dossier "Overwatch" avec vos log et Settings ,...⚠️
-
-
-![image](https://github.com/user-attachments/assets/e373d614-42f6-4429-8cd4-df70bc45bfbb)
+- ⚠️**Sécurité** : Un dossier "parametre" va apparaître dans "Téléchargements", c'est votre dossier "Overwatch" avec vos logs et Settings, etc.⚠️
 
 - **Dépannage** : Si vous rencontrez des problèmes, vérifiez les permissions des dossiers et assurez-vous que vous avez suffisamment d'espace disque.
 
 ## Exemple d'Exécution
 
 ![image](https://github.com/user-attachments/assets/e606957d-5b02-4393-996d-9b60f6106e6a)
-
 ![image](https://github.com/user-attachments/assets/293a8078-5246-4428-8cf0-8769a1783d3b)
-
 ![image](https://github.com/user-attachments/assets/c236dfeb-4fdf-418b-ac79-d6bb7fbdcc0a)
-
 ![image](https://github.com/user-attachments/assets/68074212-dea1-417f-b4f9-838e8d4e00c3)
+
