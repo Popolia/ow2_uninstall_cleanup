@@ -1,5 +1,20 @@
 # Script de Désinstallation d'Overwatch 2 et Nettoyage Associé
 
+pour les utilisateurs a guérit vous pouvez utiliser :
+
+**le logiciel `Bulk Crap Uninstaller` => https://www.lesnumeriques.com/telecharger/bulk-crap-uninstaller-53124**
+
+**Désinstallation en masse : **Comme son nom l'indique, BCU permet de désinstaller plusieurs programmes simultanément, ce qui est particulièrement utile si tu souhaites nettoyer ton système.
+
+**Détection automatique :** Il peut détecter automatiquement les logiciels installés, y compris ceux qui ne sont pas visibles dans le panneau de configuration classique de Windows.
+
+**Analyse des fichiers restants :** Après la désinstallation d'un programme, BCU peut scanner le système pour détecter les fichiers et clés de registre laissés par le programme désinstallé, ce qui permet de nettoyer complètement ton système.
+
+**Filtrage et recherche :** Tu peux filtrer les applications par taille, type, ou date d'installation, et rechercher des programmes spécifiques, ce qui facilite la gestion des logiciels installés.
+
+**Options avancées :** Il offre des options pour forcer la désinstallation et gérer les programmes récalcitrants, qui ne se désinstallent pas facilement.
+
+
 Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre PC. Veuillez noter que :
 
 - **Seuls** "Battle.net" et "Overwatch 2" seront supprimés.
