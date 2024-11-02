@@ -3,6 +3,7 @@
 pour les utilisateurs aguerris , vous pouvez utiliser Bulk Crap Uninstaller ;
 
 **le logiciel `Bulk Crap Uninstaller` => https://www.lesnumeriques.com/telecharger/bulk-crap-uninstaller-53124**
+
 un guide débutant à étais mie en place pour les personnes qui voudrais l'utiliser => https://github.com/Popolia/ow2_uninstall_cleanup/blob/main/Guide%20D%C3%A9butant%20pour%20Bulk%20Crap%20Uninstaller.pdf
 
 **Désinstallation en masse : **Comme son nom l'indique, BCU permet de désinstaller plusieurs programmes simultanément, ce qui est particulièrement utile si tu souhaites nettoyer ton système.
