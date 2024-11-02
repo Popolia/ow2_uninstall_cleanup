@@ -1,6 +1,6 @@
 # Script de Désinstallation d'Overwatch 2 et Nettoyage Associé
 
-pour les utilisateurs a guérit vous pouvez utiliser :
+pour les utilisateurs a guérit vous pouvez utiliser Bulk Crap Uninstaller ;
 
 **le logiciel `Bulk Crap Uninstaller` => https://www.lesnumeriques.com/telecharger/bulk-crap-uninstaller-53124**
 
