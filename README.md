@@ -14,6 +14,7 @@ pour les utilisateurs a guérit vous pouvez utiliser :
 
 **Options avancées :** Il offre des options pour forcer la désinstallation et gérer les programmes récalcitrants, qui ne se désinstallent pas facilement.
 
+#
 
 Ce script permet de désinstaller **Blizzard** et **Overwatch 2** (OW2) de votre PC. Veuillez noter que :
 
